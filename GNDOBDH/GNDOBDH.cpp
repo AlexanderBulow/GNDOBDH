@@ -9,11 +9,13 @@ using namespace std;
 int main()
 {
 	while (true) {
-		char command[64] = "something";
-		SendCom(command, "GNDtoPF");
 
-		char receiving[32];
-		GetCommand(receiving, "GNDtoPF");
+		//char command[64] = "something";
+		//SendCom(command, 1);
+
+		char* receiving = GetCommand(1);
+		cout << receiving << endl;
+		
 	}
 	return 0;
 }
