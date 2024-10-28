@@ -20,10 +20,8 @@ int main()
 
 		char* TC = Telecommand();
 		cout << TC << endl;
-		sleep(2);
-
-			cout << "Send command" << endl;
-			SendCom(TC, 1);
+		//SendCom(TC, 1);
+		
 			
 		//char command[64] = "something";
 		//SendCom(command, 1);
