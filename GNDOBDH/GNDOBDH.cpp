@@ -29,29 +29,13 @@ int main()
 		//gets acknowlegement and prints it 
 		char* receiving = GetCommand(1);
 		cout << receiving << endl;
-		//checks the command
-		string add;
-		if (check_command(TC, receiving) == 1) {
-			strcpy(receiving, add.c_str());
-			add = add + "success";
-			auto first = add.begin();
-			auto last = add.end();
-			// Convert the string to char array
-			copy(first, last, receiving);
-			printTM_and_log(receiving);	
-		}
-		else {
-			strcpy(receiving, add.c_str());
-			add = add + "fail";
-			auto first = add.begin();
-			auto last = add.end();
-			// Convert the string to char array
-			copy(first, last, receiving);
-			printTM_and_log(receiving);
-		}
+
+		//random data
+		char* receiving2 = GetCommand(1);
+		printTM_and_log(receiving2);
 		//housekeeping
-		char* receiving = GetCommand(1);
-		printTM_and_log(receiving);
+		char* receiving3 = GetCommand(1);
+		printTM_and_log(receiving3);
 	}
 	return 0;
 }
