@@ -37,7 +37,7 @@ int main()
 		//housekeeping
 		char* receiving3 = GetCommand(4);
 		printTM_and_log(receiving3);
-		sleep(1);
+		sleep(20);
 	}
 	return 0;
 }

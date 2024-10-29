@@ -46,24 +46,20 @@ char* GetCommand(int talkto)
         cout << "code no work" << endl;
     }
     //wsl1 address = 127.0.0.1 wsl2 address = 172.23.240.9
-    serverAddress.sin_addr.s_addr = inet_addr("172.23.240.9"); //binding socket to address for wsl
-    cout << "1" << endl;
+    serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1"); //binding socket to address for wsl
     // binding socket.
     bind(receivingSocket, (struct sockaddr*)&serverAddress,
         sizeof(serverAddress));
 
     // listening to the assigned socket
     listen(receivingSocket, 5);
-    cout << "2" << endl;
     // accepting connection request
     int sendSocket = accept(receivingSocket, nullptr, nullptr);
-    cout << "3" << endl;
     // recieving data
     recv(sendSocket, buffer, sizeof(buffer), 0);
 
     // closing the socket.
     close(receivingSocket);
-    cout << "4" << endl;
     return buffer;
 }
 
