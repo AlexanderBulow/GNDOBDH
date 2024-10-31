@@ -2,7 +2,7 @@
 
 void printTM_and_log(char PFtoGRD[]) {
 	// Print to console
-	cout << PFtoGRD << endl;
+	//cout << PFtoGRD << endl;
 
 	// Save to the log file
 	ofstream fout;

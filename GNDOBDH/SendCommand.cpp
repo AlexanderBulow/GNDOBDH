@@ -46,7 +46,6 @@ void SendCom(char Command[64], int talkto) {
     // sending connection request if it fails we retry
     while (connect(sendSocket, (struct sockaddr*)&serverAddress,
         sizeof(serverAddress)) == -1) {
-        cout << "failed connection" << endl;
         sleep(1);
     }
 
